@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* 颜色变量定义 - 集中管理网站所有颜色，便于统一修改 */
+@theme {
+  --color-primary: #0066cc;
+  /* 主色调 - 蓝色 */
+  --color-secondary: #e9f4ffff;
+  /* 次要颜色 - 浅蓝白色 */
+  --color-tertiaryr: #d9f3fdff;
+  /* 第三颜色 - 浅蓝色 */
+  --color-quaternary: #6794b488;
+  /* 第四颜色 - 蓝灰色(半透明) */
+  --color-quinary: #85abc698;
+  /* 第五颜色 - 浅蓝灰色(半透明) */
+  --color-senary: #cab9ab84;
+  /* 第六颜色 - 灰棕色(半透明) */
+  --color-text: #333333;
+  /* 文本颜色 - 深灰色 */
+  --color-light: #ffffff;
+  /* 浅色文本 - 白色 */
+  --color-accent: #004d99;
+  /* 强调色 - 深蓝 */
+}
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .transition-custom {
+    transition: all 0.3s ease;
+  }
+  .indent-15 {
+    text-indent: 1.5rem;
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+.fade-in:hover {
+  animation: fadeIn 0.5s ease-in-out;
+  /* 同时放大 */
+  transform: scale(1.01);
+}

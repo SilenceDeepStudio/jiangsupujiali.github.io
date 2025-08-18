@@ -79,3 +79,25 @@ tabBtns.forEach((btn) => {
     document.getElementById(tabId).classList.add("active");
   });
 });
+// ... existing code ...
+// 卷闸栏交互
+document.querySelectorAll(".has-dropdown").forEach((dropdown) => {
+  // 桌面端悬停效果已通过CSS实现
+  // 移动端点击效果
+  dropdown.addEventListener("click", function (e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      this.classList.toggle("dropdown-open");
+    }
+  });
+});
+
+// 点击页面其他区域关闭卷闸栏
+document.addEventListener("click", function (e) {
+  if (!e.target.closest(".has-dropdown") && window.innerWidth <= 768) {
+    document.querySelectorAll(".has-dropdown").forEach((dropdown) => {
+      dropdown.classList.remove("dropdown-open");
+    });
+  }
+});
+// ... existing code ...

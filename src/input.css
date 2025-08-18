@@ -54,3 +54,53 @@
   /* 同时放大 */
   transform: scale(1.01);
 }
+/* ... existing code ... */
+/* 卷闸栏样式 */
+.has-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.has-dropdown:hover .dropdown-menu {
+  max-height: 24rem; 
+  opacity: 1;
+  visibility: visible;
+}.has-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.has-dropdown:hover .dropdown-menu {
+  max-height: 24rem; 
+  visibility: visible;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    max-h-0;
+    overflow: hidden;
+  }
+
+  .dropdown-open .dropdown-menu {
+    max-h-full;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/* ... existing code ... */

@@ -67,11 +67,12 @@
   transition: all 0.3s ease-in-out;
 }
 
-.has-dropdown:hover .dropdown-menu {
-  max-height: 24rem; 
+.has-dropdown:hover.dropdown-menu {
+  max-height: 24rem;
   opacity: 1;
   visibility: visible;
-}.has-dropdown {
+}
+.has-dropdown {
   position: relative;
 }
 
@@ -83,22 +84,19 @@
 }
 
 .has-dropdown:hover .dropdown-menu {
-  max-height: 24rem; 
+  max-height: 24rem;
   visibility: visible;
 }
 
-/* 移动端适配 */
 @media (max-width: 768px) {
   .dropdown-menu {
     position: static;
     background: transparent;
     box-shadow: none;
-    max-h-0;
     overflow: hidden;
   }
 
   .dropdown-open .dropdown-menu {
-    max-h-full;
     opacity: 1;
     visibility: visible;
   }

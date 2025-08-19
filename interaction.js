@@ -101,3 +101,40 @@ document.addEventListener("click", function (e) {
   }
 });
 // ... existing code ...
+// 等待DOM加载完成
+document.addEventListener("DOMContentLoaded", function () {
+  // 获取section元素
+  const carouselSection = document.querySelector("[data-carousel-container]");
+  if (!carouselSection) return;
+
+  // 定义轮播图片数组（确保这些图片存在于hero_img文件夹中）
+  const images = [
+    "hero_img/中欧立面1.png",
+    "hero_img/内廊1.png",
+    "hero_img/内蒙华为立面2.png",
+    "hero_img/华发立面1.png",
+    "hero_img/宝业中心立面1.png",
+    "hero_img/海南陵水立面1.png",
+    "hero_img/环保大学立面2.png",
+    "hero_img/立面1.png",
+    "hero_img/芜湖华为立面1.png",
+    "hero_img/花鸟岛立面2.png",
+    "hero_img/青浦华为2.png",
+    "hero_img/马术馆内廊.png",
+  ];
+
+  let currentIndex = 0;
+  const intervalTime = 5000; // 5秒切换一次
+
+  // 轮播函数
+  function rotateBackgroundImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    carouselSection.style.backgroundImage = `linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.7)), url('${images[currentIndex]}')`;
+  }
+
+  // 初始设置第一张图片
+  carouselSection.style.backgroundImage = `linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.7)), url('${images[0]}')`;
+
+  // 设置定时器
+  setInterval(rotateBackgroundImage, intervalTime);
+});

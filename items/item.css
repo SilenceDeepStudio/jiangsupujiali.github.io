@@ -166,8 +166,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  height: 100%;
+  width: full;
   overflow: hidden;
 }
 

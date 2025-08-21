@@ -40,6 +40,8 @@ async function generateMenu() {
         li.className = "my-2";
 
         const a = document.createElement("a");
+        a.className = "translate-item";
+
         const encodedDir = encodeURIComponent(dir);
         a.href = `${config.linkPrefix}${encodedDir}/index.html`;
         a.textContent = dir;

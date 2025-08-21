@@ -34,7 +34,7 @@ function isImageFile(filename) {
  * @param {string} itemPath - 项目文件夹路径
  * @param {string} description - 描述内容
  * @param {string[]} imageFiles - 图片文件数组
- * @param {string} type - 类型（"products" 或 "items"）
+ * @param {string} type - 类型
  */
 async function generateDetailPage(
   itemName,
@@ -43,7 +43,7 @@ async function generateDetailPage(
   imageFiles,
   type
 ) {
-  // 生成图片轮播HTML（路径改为同文件夹相对路径）
+  // 生成图片部分
   const imagesHtml = imageFiles
     .map(
       (img) => `
@@ -63,37 +63,45 @@ async function generateDetailPage(
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../../img/logo-1种尺寸.ico" type="image/x-icon" />
-    <title>${itemName} - 详情</title>
+    <title class="translate-item">${itemName} - 详情</title>
+    <link rel="stylesheet" href="../../src/output.css" />
     <link rel="stylesheet" href="${
       type === "items" ? "../item.css" : "../product.css"
     }" />
+    <script src="${
+      type === "items" ? "../item.js" : "../products.js"
+    }" defer=""></script>
   </head>
   <body>
     <header id="header">
       <div class="header-content">
-        <h1 class="logo">${type === "items" ? "项目展示" : "产品展示"}</h1>
+        <h1 class="translate-item logo">${
+          type === "items" ? "项目展示" : "产品展示"
+        }</h1>
+
         <nav>
           <ul>
             <li><a href="../../index.html#${
               type === "items" ? "show_case_grid" : "product-center"
-            }">全部${type === "items" ? "项目" : "产品"}</a></li>
-            <li><a href="#footer">关于我们</a></li>
+            }" class="translate-item">全部${
+    type === "items" ? "项目" : "产品"
+  }</a></li>
+            <li><a href="#footer" class="translate-item">关于我们</a></li>
           </ul>
         </nav>
       </div>
     </header>
-
     <section class="hero">
       <div class="container">
-        <h2>${itemName}</h2>
-        <p>${description}</p>
+        <h2 class="translate-item">${itemName}</h2>
+        <p class="translate-item">${description}</p>
       </div>
     </section>
 
     <section class="products-section">
       <div class="but_prvnex">
-        <button class="load-more-prv">上一张</button>
-        <button class="load-more-nex">下一张</button>
+        <button class="translate-item load-more-prv">上一张</button>
+        <button class="translate-item load-more-nex">下一张</button>
       </div>
       <div class="carousel-container">${imagesHtml}</div>
     </section>
@@ -102,29 +110,34 @@ async function generateDetailPage(
         <a href="../../index.html#${
           type === "items" ? "show_case_grid" : "product-center"
         }"
-          ><button type="button" class="load-more">更多${
+          ><button type="button" class="translate-item load-more">更多${
             type === "items" ? "项目" : "产品"
           }展示</button></a
         >
       </div>
     </section>
 
-    <footer id="footer">
-      <div class="footer-content">
+    <footer id="footer" class="flex flex-col items-center justify-center">
+      <div>
         <div class="footer-column">
-          <h3>${type === "items" ? "项目展示" : "产品展示"}</h3>
-          <p>精选优质${
+          <h3 class="translate-item">${
+            type === "items" ? "项目展示" : "产品展示"
+          }</h3>
+
+          <p class="translate-item">精选优质${
             type === "items" ? "项目" : "产品"
           }，为您提供最好的选择</p>
         </div>
         <div class="footer-column">
-          <h4>快速链接</h4>
+          <h4 class="translate-item ">快速链接</h4>
+
           <ul>
             <li class="footer-item">
-              <a class="footer-link" href="../../index.html">首页</a>
+              <a class="translate-item footer-link" href="../../index.html">首页</a>
+
             </li>
             <li class="footer-item">
-              <a class="footer-link" href="../../index.html#${
+              <a class="translate-item footer-link" href="../../index.html#${
                 type === "items" ? "show_case_grid" : "product-center"
               }"
                 >全部${type === "items" ? "项目" : "产品"}</a
@@ -133,16 +146,23 @@ async function generateDetailPage(
           </ul>
         </div>
         <div class="footer-column">
-          <h4>联系我们</h4>
+          <h4 class="translate-item">联系我们</h4>
           <ul>
-            <li class="footer-item"><i class="fa fa-map-marker mr-2"></i> 公司地址</li>
-            <li class="footer-item"><i class="fa fa-phone mr-2"></i> 电话号码</li>
-            <li class="footer-item"><i class="fa fa-envelope mr-2"></i> 公司邮箱</li>
+            <li class="translate-item footer-item"><i class="fa fa-map-marker mr-2"></i>地址：江苏省海门市广州路2111号</li>
+            <li class="translate-item footer-item"><i class="fa fa-phone mr-2"></i>电话：0513-69956766</li>
+            <li class="translate-item footer-item"><i class="fa fa-envelope mr-2"></i>邮箱：1056137138@qq.com</li>
           </ul>
         </div>
       </div>
     </footer>
-
+    <div class="language-switcher fixed right-4 top-40 transform -translate-y-1/2 z-50">
+      <button id="cn-btn" class="px-3 py-1 bg-secondary text-primary font-bold rounded-l">
+        中
+      </button>
+      <button id="en-btn" class="px-3 py-1 bg-primary text-white font-bold rounded-r">
+        En
+      </button>
+    </div>
     <script>
       // 导航栏滚动效果
       window.addEventListener("scroll", function () {
@@ -211,8 +231,8 @@ function generateProductCardHtml(productName, firstImage, description) {
         />
       </a>
       <div class="p-4">
-        <h4 class="font-semibold text-lg mb-2 text-neutral-800">${productName}</h4>
-        <p class="text-neutral-600">${shortDescription}</p>
+        <h4 class="translate-item font-semibold text-lg mb-2 text-neutral-800">${productName}</h4>
+        <p class="translate-item text-neutral-600">${shortDescription}</p>
       </div>
     </div>
   `;
@@ -238,8 +258,10 @@ function generateItemCardHtml(itemName, firstImage, description) {
              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
       
       <div class="case-overlay absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
-        <h4 class="font-semibold text-lg">${itemName}</h4>
-        <p>${shortDescription}</p>
+        <h4 class="translate-item font-semibold text-lg">${itemName}</h4>
+              <button class="translate-item text-left">
+                  点击图片查看详情
+                </button>
       </div>
       </a>
     </div>

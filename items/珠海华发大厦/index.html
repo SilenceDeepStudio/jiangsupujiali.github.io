@@ -4,33 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../../img/logo-1种尺寸.ico" type="image/x-icon" />
-    <title>珠海华发大厦 - 详情</title>
+    <title class="translate-item">珠海华发大厦 - 详情</title>
+    <link rel="stylesheet" href="../../src/output.css" />
     <link rel="stylesheet" href="../item.css" />
+    <script src="../item.js" defer=""></script>
   </head>
   <body>
     <header id="header">
       <div class="header-content">
-        <h1 class="logo">项目展示</h1>
+        <h1 class="translate-item logo">项目展示</h1>
+
         <nav>
           <ul>
-            <li><a href="../../index.html#show_case_grid">全部项目</a></li>
-            <li><a href="#footer">关于我们</a></li>
+            <li><a href="../../index.html#show_case_grid" class="translate-item">全部项目</a></li>
+            <li><a href="#footer" class="translate-item">关于我们</a></li>
           </ul>
         </nav>
       </div>
     </header>
-
     <section class="hero">
       <div class="container">
-        <h2>珠海华发大厦</h2>
-        <p>项目用地位于珠海市金湾航空新城，邻近金湾立交，位于金湾区域的中心地带。定位为高端商务办公为主、结合住宅 ”的办公载体。设计理念以“旋”字出发，旋 字从疋, “疋”义为“绕行”，来往于各方之间 ，调和场地与周边自然、城市与生活三种要素的关系。通过“旋”，创造丰富优越的景观视线；丰富宜人的城市公共活动空间，激活城市活力；创造与周边建筑截然不同的城市形象，使设计成为新的地标性建筑。</p>
+        <h2 class="translate-item">珠海华发大厦</h2>
+        <p class="translate-item">项目用地位于珠海市金湾航空新城，邻近金湾立交，位于金湾区域的中心地带。定位为高端商务办公为主、结合住宅 ”的办公载体。设计理念以“旋”字出发，旋 字从疋, “疋”义为“绕行”，来往于各方之间 ，调和场地与周边自然、城市与生活三种要素的关系。通过“旋”，创造丰富优越的景观视线；丰富宜人的城市公共活动空间，激活城市活力；创造与周边建筑截然不同的城市形象，使设计成为新的地标性建筑。</p>
       </div>
     </section>
 
     <section class="products-section">
       <div class="but_prvnex">
-        <button class="load-more-prv">上一张</button>
-        <button class="load-more-nex">下一张</button>
+        <button class="translate-item load-more-prv">上一张</button>
+        <button class="translate-item load-more-nex">下一张</button>
       </div>
       <div class="carousel-container">
       <div class="overflow-hidden rounded-lg mb-4 carousel-slide">
@@ -43,41 +45,51 @@
     <section class="text-center">
       <div>
         <a href="../../index.html#show_case_grid"
-          ><button type="button" class="load-more">更多项目展示</button></a
+          ><button type="button" class="translate-item load-more">更多项目展示</button></a
         >
       </div>
     </section>
 
-    <footer id="footer">
-      <div class="footer-content">
+    <footer id="footer" class="flex flex-col items-center justify-center">
+      <div>
         <div class="footer-column">
-          <h3>项目展示</h3>
-          <p>精选优质项目，为您提供最好的选择</p>
+          <h3 class="translate-item">项目展示</h3>
+
+          <p class="translate-item">精选优质项目，为您提供最好的选择</p>
         </div>
         <div class="footer-column">
-          <h4>快速链接</h4>
+          <h4 class="translate-item ">快速链接</h4>
+
           <ul>
             <li class="footer-item">
-              <a class="footer-link" href="../../index.html">首页</a>
+              <a class="translate-item footer-link" href="../../index.html">首页</a>
+
             </li>
             <li class="footer-item">
-              <a class="footer-link" href="../../index.html#show_case_grid"
+              <a class="translate-item footer-link" href="../../index.html#show_case_grid"
                 >全部项目</a
               >
             </li>
           </ul>
         </div>
         <div class="footer-column">
-          <h4>联系我们</h4>
+          <h4 class="translate-item">联系我们</h4>
           <ul>
-            <li class="footer-item"><i class="fa fa-map-marker mr-2"></i> 公司地址</li>
-            <li class="footer-item"><i class="fa fa-phone mr-2"></i> 电话号码</li>
-            <li class="footer-item"><i class="fa fa-envelope mr-2"></i> 公司邮箱</li>
+            <li class="translate-item footer-item"><i class="fa fa-map-marker mr-2"></i>地址：江苏省海门市广州路2111号</li>
+            <li class="translate-item footer-item"><i class="fa fa-phone mr-2"></i>电话：0513-69956766</li>
+            <li class="translate-item footer-item"><i class="fa fa-envelope mr-2"></i>邮箱：1056137138@qq.com</li>
           </ul>
         </div>
       </div>
     </footer>
-
+    <div class="language-switcher fixed right-4 top-40 transform -translate-y-1/2 z-50">
+      <button id="cn-btn" class="px-3 py-1 bg-secondary text-primary font-bold rounded-l">
+        中
+      </button>
+      <button id="en-btn" class="px-3 py-1 bg-primary text-white font-bold rounded-r">
+        En
+      </button>
+    </div>
     <script>
       // 导航栏滚动效果
       window.addEventListener("scroll", function () {

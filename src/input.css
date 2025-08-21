@@ -55,12 +55,12 @@
   transform: scale(1.01);
 }
 .carousel-section {
-  transition: background-image 1s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
   background-size: cover;
   background-position: center;
 }
 
-/* 可选：添加淡入淡出效果 */
+/* 添加淡入淡出效果 */
 .carousel-section::before {
   content: "";
   position: absolute;
@@ -74,4 +74,20 @@
 .carousel-section > * {
   position: relative;
   z-index: 2;
+}
+/* 语言切换按钮 */
+.language-switcher {
+  display: flex;
+}
+
+.language-switcher button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-switcher button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+.translate-item {
 }

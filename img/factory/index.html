@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../img/logo-1种尺寸.ico" type="image/x-icon" />
+    <title class="translate-item">工厂详情 - 详情</title>
+    <link rel="stylesheet" href="../../src/output.css" />
+    <script src="factory.js" defer></script>
+  </head>
+  <body class="text-gray-800 antialiased">
+    <header
+      id="header"
+      class="fixed w-full bg-white shadow-md transition-all duration-300 py-4 z-50"
+    >
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex justify-between items-center">
+          <h1 class="translate-item text-3xl font-bold text-primary">
+            工厂全景详情页
+          </h1>
+          <nav class="hidden md:block">
+            <ul class="flex space-x-8">
+              <li>
+                <a
+                  href="../../index.html#product-center"
+                  class="translate-item text-2xl text-gray-600 hover:text-primary transition-colors"
+                  >返回</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#footer"
+                  class="translate-item text-2xl text-gray-600 hover:text-primary transition-colors"
+                  >关于我们</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- 移动端菜单按钮 -->
+          <button class="md:hidden text-gray-600 focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 主横幅 -->
+    <section class="hero pt-40 pb-16 bg-primary text-white">
+      <div class="container mx-auto px-4 md:px-6 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 translate-item">
+          工厂全貌
+        </h2>
+        <p
+          class="text-lg md:text-xl max-w-5xl mx-auto opacity-90 translate-item"
+        >
+          江苏普嘉丽预制构件公司工厂坐落于产业园区核心地带，总占地面积约 14000 平方米，整体布局遵循 “生产高效化、流程标准化、环境绿色化”原则，构建起从原材料加工到成品出厂的全链条智能制造体系。工厂正门入口处设有智能门禁与车辆调度区，确保人员与物流进出有序。进入厂区后，左侧为GRC构件生产主车间，车间内配备 12条自动化生产线，包括数控钢筋加工设备、高精度 GRC喷射成型机、智能养护窑等专业设备，可实现日均 200 平方米 GRC幕墙构件的生产；生产线旁设置透明观摩通道，客户可实时查看构件浇筑、脱模、打磨等工序，直观感受标准化生产流程。厂区中部为技术研发与质量检测中心，三层独栋建筑内设有材料实验室、结构力学测试室、BIM技术应用中心：材料实验室可对水泥、纤维、外加剂等原材料进行 30余项指标检测，确保源头质量可控；结构力学测试室配备 500吨级压力试验机，能模拟不同气候环境下 GRC 构件的承载性能与耐久性；BIM技术中心通过三维建模实现构件生产与现场安装的精准对接，减少施工误差。厂区右侧为成品仓储与物流配送区，10000 平方米的智能仓储库采用立体货架与AGV 机器人协同作业，可容纳 5000平方米以上的成品构件，同时配备温湿度控制系统，避免构件因环境因素受损；物流区设有3个大型装卸平台，可对接集装箱货车与工程专用运输车辆，实现成品从仓库到项目现场的无缝转运。此外，厂区内还配套建设了员工休息区、绿色景观带与雨水回收系统，既保障员工工作舒适度，又践行环保生产理念，整体呈现出“技术先进、管理规范、环境友好” 的现代化 GRC 幕墙生产基地风貌。
+        </p>
+      </div>
+    </section>
+
+    <!-- 产品图片轮播 -->
+    <section class="products-section py-12 bg-gray-50">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex justify-center mb-8">
+          <button
+            class="load-more-prv bg-white text-primary border border-primary rounded-full px-6 py-2 mr-4 hover:bg-primary hover:text-white transition-colors translate-item"
+          >
+            上一张
+          </button>
+          <button
+            class="load-more-nex bg-white text-primary border border-primary rounded-full px-6 py-2 ml-4 hover:bg-primary hover:text-white transition-colors translate-item"
+          >
+            下一张
+          </button>
+        </div>
+
+        <div class="carousel-container mx-auto max-w-4xl">
+          <div class="carousel-slide rounded-lg overflow-hidden shadow-lg mb-6">
+            <img
+              src="微信图片_20250821173457_26.jpg"
+              alt="外观幕墙"
+              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div
+            class="carousel-slide rounded-lg overflow-hidden shadow-lg mb-6 hidden"
+          >
+            <img
+              src="微信图片_20250821173457_29.jpg"
+              alt="外观幕墙"
+              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div
+            class="carousel-slide rounded-lg overflow-hidden shadow-lg mb-6 hidden"
+          >
+            <img
+              src="微信图片_20250821173458_16.jpg"
+              alt="外观幕墙"
+              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div
+            class="carousel-slide rounded-lg overflow-hidden shadow-lg mb-6 hidden"
+          >
+            <img
+              src="微信图片_20250821173458_18.jpg"
+              alt="外观幕墙"
+              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div
+            class="carousel-slide rounded-lg overflow-hidden shadow-lg mb-6 hidden"
+          >
+            <img
+              src=" 微信图片_20250821173458_19.jpg"
+              alt="外观幕墙"
+              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div
+            class="carousel-slide rounded-lg overflow-hidden shadow-lg mb-6 hidden"
+          >
+            <img
+              src="微信图片_20250821173458_20.jpg"
+              alt="外观幕墙"
+              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div
+            class="carousel-slide rounded-lg overflow-hidden shadow-lg mb-6 hidden"
+          >
+            <img
+              src="微信图片_20250821173458_24.jpg"
+              alt="外观幕墙"
+              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div
+            class="carousel-slide rounded-lg overflow-hidden shadow-lg mb-6 hidden"
+          >
+            <img
+              src="微信图片_20250821173458_25.jpg"
+              alt="外观幕墙"
+              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div
+            class="carousel-slide rounded-lg overflow-hidden shadow-lg mb-6 hidden"
+          >
+            <img
+              src="微信图片_20250821173458_27.jpg"
+              alt="外观幕墙"
+              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div
+            class="carousel-slide rounded-lg overflow-hidden shadow-lg mb-6 hidden"
+          >
+            <img
+              src="微信图片_20250821173458_28.jpg"
+              alt="外观幕墙"
+              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div
+            class="carousel-slide rounded-lg overflow-hidden shadow-lg mb-6 hidden"
+          >
+            <img
+              src="微信图片_20250821173458_31.jpg"
+              alt="外观幕墙"
+              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div
+            class="carousel-slide rounded-lg overflow-hidden shadow-lg mb-6 hidden"
+          >
+            <img
+              src="微信图片_20250821173458_32.jpg"
+              alt="外观幕墙"
+              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div
+            class="carousel-slide rounded-lg overflow-hidden shadow-lg mb-6 hidden"
+          >
+            <img
+              src="微信图片_20250821173541_40.jpg"
+              alt="外观幕墙"
+              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div
+            class="carousel-slide rounded-lg overflow-hidden shadow-lg mb-6 hidden"
+          >
+            <img
+              src="微信图片_20250821173541_41.jpg"
+              alt="外观幕墙"
+              class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer id="footer" class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="footer-column">
+            <h3 class="text-xl font-bold mb-4 translate-item">江苏普嘉丽</h3>
+            <p class="text-gray-300 translate-item">
+              精选优质产品，为您提供最好的选择
+            </p>
+          </div>
+          <div class="footer-column">
+            <h4 class="text-lg font-semibold mb-4 translate-item">快速链接</h4>
+            <ul class="space-y-2">
+              <li class="footer-item">
+                <a
+                  href="../../index.html"
+                  class="text-gray-300 hover:text-white transition-colors translate-item footer-link"
+                  >首页</a
+                >
+              </li>
+              <li class="footer-item">
+                <a
+                  href="../../index.html#product-center"
+                  class="text-gray-300 hover:text-white transition-colors translate-item footer-link"
+                  >全部产品</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4 class="text-lg font-semibold mb-4 translate-item">联系我们</h4>
+            <ul class="space-y-2">
+              <li class="text-gray-300 translate-item footer-item">
+                <i class="fa fa-map-marker mr-2"></i
+                >地址：江苏省海门市广州路2111号
+              </li>
+              <li class="text-gray-300 translate-item footer-item">
+                <i class="fa fa-phone mr-2"></i>电话：0513-69956766
+              </li>
+              <li class="text-gray-300 translate-item footer-item">
+                <i class="fa fa-envelope mr-2"></i>邮箱：1056137138@qq.com
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 语言切换器 -->
+    <div
+      class="language-switcher fixed bottom-10 right-6 transform -translate-y-1/2 z-50 flex flex-col space-y-4"
+    >
+      <button
+        id="cn-btn"
+        class="w-12 h-12 rounded-full bg-blue-600 text-white font-bold shadow-lg flex items-center justify-center transition-transform hover:scale-110"
+      >
+        中
+      </button>
+      <button
+        id="en-btn"
+        class="w-12 h-12 rounded-full bg-gray-700 text-white font-bold shadow-lg flex items-center justify-center transition-transform hover:scale-110"
+      >
+        En
+      </button>
+    </div>
+
+    <script>
+      // 导航栏滚动效果
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+          header.classList.add("py-2");
+          header.classList.remove("py-4");
+        } else {
+          header.classList.add("py-4");
+          header.classList.remove("py-2");
+        }
+      });
+
+      // 图片轮播功能
+      let slideIndex = 0;
+      const slides = document.getElementsByClassName("carousel-slide");
+
+      function showSlides() {
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].classList.add("hidden");
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].classList.remove("hidden");
+      }
+
+      // 初始化轮播
+      showSlides();
+
+      // 前后切换按钮
+      document.querySelector(".load-more-prv").addEventListener("click", () => {
+        slideIndex -= 2;
+        if (slideIndex < 0) slideIndex = slides.length - 1;
+        showSlides();
+      });
+      document
+        .querySelector(".load-more-nex")
+        .addEventListener("click", showSlides);
+    </script>
+  </body>
+</html>

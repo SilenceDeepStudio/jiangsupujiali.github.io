@@ -100,7 +100,6 @@ document.addEventListener("click", function (e) {
     });
   }
 });
-// ... existing code ...
 // 等待DOM加载完成
 document.addEventListener("DOMContentLoaded", function () {
   // 获取section元素

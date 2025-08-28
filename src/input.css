@@ -91,3 +91,20 @@
 }
 .translate-item {
 }
+.carousel-section {
+  transition: background-image 1s ease-in-out;
+}
+.progress-bar {
+  animation: progress linear;
+}
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.carousel-section:hover .progress-bar {
+  animation-play-state: paused;
+}

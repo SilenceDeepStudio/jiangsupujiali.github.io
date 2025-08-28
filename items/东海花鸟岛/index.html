@@ -1,40 +1,61 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../../img/logo-1种尺寸.ico" type="image/x-icon" />
     <title class="translate-item">东海花鸟岛 - 详情</title>
-    <link rel="stylesheet" href="../../src/output.css" />
-    <link rel="stylesheet" href="../item.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2563eb',
+              secondary: '#f8fafc',
+              accent: '#f97316',
+              dark: '#1e293b',
+            }
+          }
+        }
+      }
+    </script>
     <script src="../item.js" defer=""></script>
   </head>
-  <body>
-    <header id="header">
-      <div class="header-content">
-        <h1 class="translate-item logo">项目展示</h1>
+  <body class="min-h-[100vh] flex flex-col bg-gradient-to-br from-blue-50 to-indigo-50">
+    <header id="header" class="bg-white shadow-md fixed w-full top-0 z-40 transition-all duration-300">
+      <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
+        <h1 class="translate-item text-2xl font-bold text-blue-800">项目展示</h1>
 
         <nav>
-          <ul>
-            <li><a href="../../index.html#show_case_grid" class="translate-item">全部项目</a></li>
-            <li><a href="#footer" class="translate-item">关于我们</a></li>
+          <ul class="flex space-x-8">
+            <li><a href="../../index.html#show_case_grid" class="translate-item text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">全部项目</a></li>
+            <li><a href="#footer" class="translate-item text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">关于我们</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <section class="hero">
-      <div class="container">
-        <h2 class="translate-item">东海花鸟岛</h2>
-        <p class="translate-item">这座建筑外观极具未来感，以纯净白色为主色调，如同一朵飘逸的云朵降临大地。流畅且富有张力的曲线构成独特轮廓，层层叠叠的形态打破传统建筑的规整，仿佛在动态中凝固。大面积玻璃幕墙与白色体块交融，既引入充足光线，又营造出通透轻盈之感，与周围山海景致对话，展现出自然与建筑艺术的奇妙融合，是现代建筑美学的生动诠释 。</p>
-      </div>
-    </section>
+    
+    <main class="flex-grow mt-20 mb-12">
+      <section class="max-w-4xl mx-auto px-4 py-10 bg-white rounded-xl shadow-lg mb-10">
+        <div class="text-center">
+          <h2 class="translate-item text-4xl font-bold text-gray-800 mb-6">东海花鸟岛</h2>
+          <p class="translate-item text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">这座建筑外观极具未来感，以纯净白色为主色调，如同一朵飘逸的云朵降临大地。流畅且富有张力的曲线构成独特轮廓，层层叠叠的形态打破传统建筑的规整，仿佛在动态中凝固。大面积玻璃幕墙与白色体块交融，既引入充足光线，又营造出通透轻盈之感，与周围山海景致对话，展现出自然与建筑艺术的奇妙融合，是现代建筑美学的生动诠释 。</p>
+        </div>
+      </section>
 
-    <section class="products-section">
-      <div class="but_prvnex">
-        <button class="translate-item load-more-prv">上一张</button>
-        <button class="translate-item load-more-nex">下一张</button>
-      </div>
-      <div class="carousel-container">
+      <section class="products-section max-w-5xl mx-auto px-4 bg-white rounded-xl shadow-lg py-8 mb-10">
+        <div class="but_prvnex flex justify-center space-x-6 mb-8">
+          <button class="translate-item load-more-prv bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:-translate-y-1 shadow-md">
+            <i class="fas fa-arrow-left mr-2"></i>上一张
+          </button>
+          <button class="translate-item load-more-nex bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:-translate-y-1 shadow-md">
+            下一张<i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+        <div class="carousel-container rounded-2xl overflow-hidden shadow-xl">
       <div class="overflow-hidden rounded-lg mb-4 carousel-slide">
         <img src="./花鸟岛立面.png" 
              alt="东海花鸟岛" 
@@ -53,90 +74,177 @@
              class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500">
       </div>
     </div>
-    </section>
-    <section class="text-center">
-      <div>
-        <a href="../../index.html#show_case_grid"
-          ><button type="button" class="translate-item load-more">更多项目展示</button></a
-        >
+        <div class="carousel-indicators flex justify-center space-x-3 mt-6" id="carousel-indicators"></div>
+      </section>
+      
+      <section class="max-w-4xl mx-auto px-4 text-center">
+        <div>
+          <a href="../../index.html#show_case_grid"
+            ><button type="button" class="translate-item load-more bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              更多项目展示
+              <i class="fas fa-arrow-right ml-2"></i>
+            </button></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="bg-gray-900 text-white py-12 mt-8">
+      <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="">
+          <h3 class="translate-item text-2xl font-bold mb-4 text-blue-300">项目展示</h3>
+
+          <p class="translate-item text-gray-300">精选优质项目，为您提供最好的选择</p>
+        </div>
+        <div class="">
+          <h4 class="translate-item text-xl font-semibold mb-4 text-blue-300">快速链接</h4>
+
+          <ul class="space-y-3">
+            <li class="">
+              <a class="translate-item text-gray-300 hover:text-white transition-colors duration-200" href="../../index.html">
+                <i class="fas fa-home mr-2"></i>首页
+              </a>
+            </li>
+            <li class="">
+              <a class="translate-item text-gray-300 hover:text-white transition-colors duration-200" href="../../index.html#show_case_grid">
+                <i class="fas fa-list mr-2"></i>全部项目
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="">
+          <h4 class="translate-item text-xl font-semibold mb-4 text-blue-300">联系我们</h4>
+          <ul class="space-y-3">
+            <li class="translate-item text-gray-300"><i class="fas fa-map-marker-alt mr-3 text-blue-300"></i>地址：江苏省海门市广州路2111号</li>
+            <li class="translate-item text-gray-300"><i class="fas fa-phone mr-3 text-blue-300"></i>电话：0513-69956766</li>
+            <li class="translate-item text-gray-300"><i class="fas fa-envelope mr-3 text-blue-300"></i>邮箱：1056137138@qq.com</li>
+          </ul>
+        </div>
       </div>
-    </section>
-
-    <footer id="footer" class="flex flex-col items-center justify-center">
-      <div>
-        <div class="footer-column">
-          <h3 class="translate-item">项目展示</h3>
-
-          <p class="translate-item">精选优质项目，为您提供最好的选择</p>
-        </div>
-        <div class="footer-column">
-          <h4 class="translate-item ">快速链接</h4>
-
-          <ul>
-            <li class="footer-item">
-              <a class="translate-item footer-link" href="../../index.html">首页</a>
-
-            </li>
-            <li class="footer-item">
-              <a class="translate-item footer-link" href="../../index.html#show_case_grid"
-                >全部项目</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4 class="translate-item">联系我们</h4>
-          <ul>
-            <li class="translate-item footer-item"><i class="fa fa-map-marker mr-2"></i>地址：江苏省海门市广州路2111号</li>
-            <li class="translate-item footer-item"><i class="fa fa-phone mr-2"></i>电话：0513-69956766</li>
-            <li class="translate-item footer-item"><i class="fa fa-envelope mr-2"></i>邮箱：1056137138@qq.com</li>
-          </ul>
-        </div>
+      <div class="max-w-6xl mx-auto px-4 mt-10 pt-6 border-t border-gray-700 text-center text-gray-400">
+        <p>© 2023 项目展示平台。保留所有权利。</p>
       </div>
     </footer>
-    <div class="language-switcher fixed right-4 top-40 transform -translate-y-1/2 z-50">
-      <button id="cn-btn" class="px-3 py-1 bg-secondary text-primary font-bold rounded-l">
+    
+    <div class="language-switcher fixed right-4 top-40 transform -translate-y-1/2 z-50 flex flex-col space-y-4">
+      <button id="cn-btn" class="w-12 h-12 rounded-full bg-blue-600 text-white font-bold shadow-lg flex items-center justify-center transition-transform hover:scale-110">
         中
       </button>
-      <button id="en-btn" class="px-3 py-1 bg-primary text-white font-bold rounded-r">
+      <button id="en-btn" class="w-12 h-12 rounded-full bg-gray-700 text-white font-bold shadow-lg flex items-center justify-center transition-transform hover:scale-110">
         En
       </button>
     </div>
+    
     <script>
       // 导航栏滚动效果
       window.addEventListener("scroll", function () {
         const header = document.querySelector("header");
         if (window.scrollY > 50) {
-          header.style.padding = "10px 0";
-          header.style.boxShadow = "0 4px 8px rgba(0,0,0,0.1)";
+          header.classList.add("shadow-lg", "py-2");
+          header.classList.remove("py-3");
         } else {
-          header.style.padding = "15px 0";
-          header.style.boxShadow = "0 2px 5px rgba(0,0,0,0.1)";
+          header.classList.remove("shadow-lg", "py-2");
+          header.classList.add("py-3");
         }
       });
 
-      // 图片轮播功能
+      // 图片轮播功能增强
       let slideIndex = 1;
-      showSlides();
-
+      let slideInterval;
+      
+      // 初始化轮播指示器
+      function initCarouselIndicators() {
+        const slides = document.getElementsByClassName("carousel-slide");
+        const indicatorsContainer = document.getElementById("carousel-indicators");
+        indicatorsContainer.innerHTML = '';
+        
+        for (let i = 0; i < slides.length; i++) {
+          const indicator = document.createElement("div");
+          indicator.classList.add("w-3", "h-3", "rounded-full", "bg-gray-300", "cursor-pointer", "transition-all", "duration-300");
+          if (i === slideIndex - 1) indicator.classList.add("bg-blue-600", "scale-125");
+          indicator.addEventListener("click", () => {
+            slideIndex = i + 1;
+            showSlides();
+            resetSlideInterval();
+          });
+          indicatorsContainer.appendChild(indicator);
+        }
+      }
+      
+      // 显示幻灯片
       function showSlides() {
         let i;
         let slides = document.getElementsByClassName("carousel-slide");
+        let indicators = document.getElementsByClassName("carousel-indicator");
+        
+        if (slides.length === 0) return;
+        
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
+        
+        for (i = 0; i < indicators.length; i++) {
+          indicators[i].classList.remove("bg-blue-600", "scale-125");
+          indicators[i].classList.add("bg-gray-300");
+        }
+        
         if (slideIndex > slides.length) {slideIndex = 1}
         if (slideIndex < 1) {slideIndex = slides.length}
+        
         slides[slideIndex - 1].style.display = "block";
+        if (indicators.length > 0) {
+          indicators[slideIndex - 1].classList.remove("bg-gray-300");
+          indicators[slideIndex - 1].classList.add("bg-blue-600", "scale-125");
+        }
       }
-
-      document.querySelector(".load-more-prv").addEventListener("click", () => plusSlides(-1));
-      document.querySelector(".load-more-nex").addEventListener("click", () => plusSlides(1));
-
+      
+      // 切换幻灯片
       function plusSlides(n) {
         slideIndex += n;
         showSlides();
       }
+      
+      // 初始化轮播
+      document.addEventListener("DOMContentLoaded", function() {
+        showSlides();
+        initCarouselIndicators();
+   
+        
+        document.querySelector(".load-more-prv").addEventListener("click", () => plusSlides(-1));
+        document.querySelector(".load-more-nex").addEventListener("click", () => plusSlides(1));
+        
+        // 平滑滚动到锚点
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+        
+        // 语言切换
+        document.getElementById('cn-btn').addEventListener('click', function() {
+          this.classList.add('bg-blue-600');
+          this.classList.remove('bg-gray-700');
+          document.getElementById('en-btn').classList.add('bg-gray-700');
+          document.getElementById('en-btn').classList.remove('bg-blue-600');
+        });
+        
+        document.getElementById('en-btn').addEventListener('click', function() {
+          this.classList.add('bg-blue-600');
+          this.classList.remove('bg-gray-700');
+          document.getElementById('cn-btn').classList.add('bg-gray-700');
+          document.getElementById('cn-btn').classList.remove('bg-blue-600');
+        });
+      });
     </script>
   </body>
 </html>

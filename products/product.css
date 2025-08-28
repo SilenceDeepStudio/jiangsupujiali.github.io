@@ -1,11 +1,9 @@
-/* 基础样式重置 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
 body {
   color: #333;
   line-height: 1.6;
@@ -13,7 +11,6 @@ body {
 a {
   text-decoration: none;
 }
-
 .container {
   display: flex;
   flex-direction: column;
@@ -261,4 +258,54 @@ footer {
   border-top: 1px solid #444;
   color: #888;
   font-size: 14px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  nav ul li {
+    margin-left: 15px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .products-section {
+    padding: 40px 0;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
 }
